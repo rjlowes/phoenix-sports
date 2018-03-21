@@ -1,0 +1,67 @@
+.t-prod {
+    @extend %wrapper;
+    padding-top: 5 * $baseline;
+}
+
+.t-prod__primary-grid {
+    @extend %grid;
+    @include breakpoint-down(sm) {
+        flex-direction: column;
+    }
+}
+
+.t-prod__gallery {
+    @include grid-col(12);
+    display: none;
+    @include breakpoint-up(md) {
+        @include grid-col(6);
+        display: block;
+    }
+
+
+    // TODO bodge
+    img {width: 100%;}
+}
+
+.t-prod__gallery-mobile {
+    @include breakpoint-up(md) {
+        display: none;
+    }
+}
+
+.t-prod__summary {
+    @include grid-col(12);
+    @include breakpoint-up(md) {
+        @include grid-col(6);
+    }
+    @include breakpoint-up(lg) {
+        @include grid-col(5);
+        @include grid-push(1);
+    }
+}
+
+.t-prod__info {
+    @include breakpoint-down(sm) {
+        padding-bottom: 4 * $baseline;
+        text-align: center;
+    }
+}
+
+.t-prod__purchase {
+    @include breakpoint-down(sm) {
+        padding-top: 4 * $baseline;
+    }
+}
+.t-prod__form {
+    border-top: 1px solid $colour-border-reg;
+    border-bottom: 1px solid $colour-border-reg;
+    margin: (2 * $baseline) 0;
+    padding: (2 * $baseline) 0;
+}
+
+
+.t-prod__spec {
+    border-top: 1px solid $colour-border-reg;
+    margin-top: 8 * $baseline;
+    padding-top: 8 * $baseline;
+}

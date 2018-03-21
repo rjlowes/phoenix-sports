@@ -1,0 +1,15 @@
+.c-thumbnail {
+    position: relative;
+}
+
+.c-thumbnail__img {
+    & img {
+        display: block;
+    }
+}
+
+.c-thumbnail__content {
+    border-top: 1px solid $colour-border-reg;
+    margin-top: 2 * $baseline;
+    padding: $baseline 0;
+}

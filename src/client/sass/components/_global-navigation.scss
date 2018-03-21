@@ -1,0 +1,98 @@
+
+.g-navigation {
+    @include media-breakpoint-down(sm) {
+        background: #fff;
+        height: 100%;
+        right: 0;
+        // padding: 0 12px;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        width: calc(100% - 60px);
+        z-index: 1001;
+
+        // TODO move to mixin
+        transform: translate3d(280px,0,0);
+        transition: transform 0.4s;
+        transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+
+        // From Nike
+        transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+        // transition-duration: 0ms;
+        // transform: translate(0px, 0px)
+        // translateZ(0px); height: 1248px;
+
+        .action-nav-show & {
+            transform: translate3d(0,0,0);
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    }
+
+}
+
+// TODO pass a class name into IconButton instead and stop using ids!
+#g-menu-button--close {
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}
+
+.nav-list {
+
+    &--l0 {
+
+    }
+
+    &--l1 {
+        @include media-breakpoint-up(md) {
+            // TODO hide off canvas instead
+            display: none;
+        }
+    }
+}
+
+.nav-list__item {
+
+    &--l0 {
+        @include media-breakpoint-up(md) {
+            display: inline-block;
+            margin-right: $baseline * 2;
+        }
+    }
+
+    &--l1 {
+
+    }
+}
+
+%nav-link {
+    display: block;
+    background-color: #f7f7f7;
+    border-color: #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    padding: 23px 46px 22px 30px;
+}
+
+.nav-list__item-link {
+    &--l0 {
+        // text-transform: uppercase;
+        // font-weight: bold;
+
+        @extend %nav-link;
+    }
+
+    &--l1 {
+        @extend %nav-link;
+    }
+}
+
+
+
+// .main-menu__btn-close {
+//     float: right;
+//     margin: 10px;
+// }
+
+// .main-menu__container {
+//     padding: 0 35px;
+// }

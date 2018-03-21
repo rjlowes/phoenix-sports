@@ -1,0 +1,17 @@
+[{
+    "name": "Menswear",
+    "slug": "menswear",
+    "children": [{"name": "Tees", "slug": "mens-tees"},{"name": "Jeans", "slug": "mens-jeans"},{"name": "Accessories", "slug": "mens-accessories"}]
+},{
+    "name": "Womenswear",
+    "slug": "womenswear",
+    "children": [{"name": "Dresses", "slug": "womens-dresses"}]
+},{
+    "name": "Sports",
+    "slug": "sports",
+    "children": [{"name": "Dresses", "slug": "womens-dresses"}]
+},{
+    "name": "Brand",
+    "slug": "brand",
+    "children": [{"name": "Dresses", "slug": "womens-dresses"}]
+}]

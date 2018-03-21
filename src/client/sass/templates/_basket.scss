@@ -1,0 +1,244 @@
+.table-shopping {
+    margin-bottom: 20px;
+    width: 100%;
+}
+ 
+.table-shopping caption {
+    @include sr-only();
+}
+ 
+.table-shopping th {
+    text-align: left;
+    //font-family: $font-family-bold;
+    font-weight: normal;
+}
+
+.table-shopping th,
+.table-shopping td {
+    vertical-align: top;
+}
+ 
+.table-shopping thead {
+    // We still want the header available to screen readers for mobile, but we don't want it visible.
+    @include media-breakpoint-down(sm) {
+        @include sr-only();
+    }
+}
+ 
+.table-shopping thead th {
+    // Headers should have borders and padding for typical table
+    @include media-breakpoint-up(md) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-right: 18px;
+        border-bottom: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+    }
+
+    &:first-child {
+        @include media-breakpoint-up(md) {
+            width: 40%;
+        }             
+    }
+}
+ 
+.table-shopping thead th span {
+    @extend .p;
+    margin-bottom: 0;
+}
+ 
+.table-shopping tbody tr {
+    @include media-breakpoint-down(sm) {
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+}
+ 
+.table-shopping tbody th,
+.table-shopping tbody td {
+    // Stacked headings
+    @include media-breakpoint-down(sm) {
+        &:last-child * {
+            @include sr-only();
+        }
+    }
+
+    // Headers should have borders and padding for typical table
+    @include media-breakpoint-up(md) {
+        border-bottom: 1px solid #cccccc;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-right: 18px;
+    }
+}
+ 
+.table-shopping tbody td {
+    @include media-breakpoint-down(sm) {
+        // Ensure we've pushed passed the product image
+        padding-left: 16px;
+    }
+}
+ 
+.table-shopping tbody tr {
+    overflow: hidden;
+}
+ 
+.table-shopping__item-image {
+    float: left;
+    width: 140px;
+    @include media-breakpoint-down(sm) {
+         margin-right: 20px;
+    }
+    @include media-breakpoint-only(md) {
+        width: 105px;
+    }
+}
+ 
+.table-shopping__item-image img {
+    width: 100%;
+}
+ 
+.table-shopping__item-info {
+    @include media-breakpoint-only(md) {
+        padding-left: 115px;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-left: 150px;
+    }
+}
+ 
+@include media-breakpoint-down(sm) {
+    .table-shopping table,
+    .table-shopping thead,
+    .table-shopping tbody,
+    .table-shopping th,
+    .table-shopping td,
+    .table-shopping tr {
+                    display: block;
+    }
+}
+ 
+ 
+ 
+.f-quantity-selector {
+ 
+}
+ 
+.f-quantity-selector__form {
+    display: inline-block;
+   
+    vertical-align: top;
+    &--decrement {
+        margin-right: 6px;
+    }
+
+    &--increment {
+        margin-left: 6px;
+    }
+}
+ 
+.f-quantity-selector__form .btn {
+    padding: 0;
+    height: 34px;
+    width: 34px;
+    //width: 100%;
+    vertical-align: top;
+}
+ 
+.f-quantity-selector__btn {
+    &--minus {
+
+    }
+
+    &--plus {
+
+    }
+}
+ 
+.f-quantity-selector__display {
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    width: 34px;
+}
+ 
+.f-quantity-selector__footer {
+    padding-top: 14px;
+}
+ 
+ 
+// basket template
+ 
+.f-tmpl-basket {
+    @extend .container;
+}
+ 
+.f-tmpl-basket__content {
+ 
+}
+ 
+ 
+.f-tmpl-basket__footer {
+    @extend .row
+}
+ 
+.f-tmpl-basket__cms {
+    @extend .col-md-6;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }             
+}
+ 
+.f-tmpl-basket__summary {
+    @extend .col-md-6;      
+}
+ 
+.f-tmpl-promo {
+    padding: 24px 0;
+    //@include rem(padding, 2.4, 0);
+}
+ 
+.f-tmpl-basket__proceed {
+   padding-top: 24px;
+    //@include rem(padding-top, 2.4);
+    //text-align: right;
+
+    @include media-breakpoint-only(md) {
+        margin-left: 25%;
+        width: 75%;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-left: 50%;
+        width: 50%;
+    }
+}   
+ 
+// Summary list used for situations such as basket total summary
+// ----------------
+.f-dl-summary {}
+ 
+.f-dl-summary__item {
+    //@extend .col-xs-6;
+    @include font-size(1.8);
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+ 
+.f-dl-summary dd {
+    //font-family: $f-font-family-bold;
+    text-align: right;
+}
+ 
+.f-dl-summary__item {
+ 
+    &--primary {
+        background-color: #e6e6e6;
+        padding: 15px 20px;
+    }
+}

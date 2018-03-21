@@ -1,0 +1,93 @@
+// square select
+// http://stackoverflow.com/questions/24210132/remove-border-radius-from-select-tag-in-bootstrap-3
+
+
+
+.legend-center {
+    margin: 0 auto 1em auto;
+}
+
+// Form field wrapper
+// What's this?
+.form-row {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+// All input types
+.form-input {
+    @include placeholder{color: $colour-placeholder};
+    @include font-size($font-size-sm);
+    border: 1px solid #dedede;
+    border-radius: 1px;
+    color: #ccc;
+    display: block;
+    line-height: 2.4em;
+    padding: 0 .8rem;
+    width: 100%;
+
+    &--med {
+        width: 50%;
+    }
+
+    &--ext {
+        line-height: 3.462;
+        padding-right: 54px;
+    }
+
+    &:active,
+    &:focus {
+        border-color: black !important;
+        outline: none;
+    }
+}
+select {
+    background: #fff;
+    height: 33px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    vertical-align: 0;
+    margin: 0 10px 0 0;
+}
+
+.form-radio,
+.form-checkbox {
+    position: relative;
+}
+
+.form-radio label,
+.form-checkbox label {
+    line-height: 1;
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.form-radio input[type=radio],
+.form-checkbox input[type=checkbox] {
+    margin-left: -20px;
+    margin-top: 6px;
+    position: absolute;
+}
+
+
+// Validation - to be renamed
+input.ng-invalid.ng-touched {
+    border-color: #A7050C;
+}
+
+label.error {
+    color: #A7050C;
+    @include rem($font-size-sm);
+    font-weight: 600;
+    line-height: $line-height-sm;
+    margin-bottom: #{$font-size-sm}em;
+    clear: both;
+    display: block;
+    padding: 0 5px;
+    margin:0;
+}

@@ -1,0 +1,18 @@
+.g-footer {
+	background-color: $slab-colour-dark-grey;
+	padding: 50px 30px;
+}
+
+.g-footer__about-us {
+	@extend .col-sm-12, .col-md-6, .col-lg-4;
+}
+
+.g-footer__links {
+	@extend .col-sm-12, .col-md-6, .col-lg-4;
+
+	a {color: $colour-text-body-invert;}
+}
+
+.g-footer__contact {
+	@extend .col-md-6, .col-lg-4;
+}

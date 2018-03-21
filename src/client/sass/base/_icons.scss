@@ -1,0 +1,102 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+@mixin icon-styles() {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+// add by me
+.material-icons {
+    vertical-align: middle;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    @extend .material-icons;
+}
+
+.icon-menu:before {
+    content: '\E5D2';
+    // TODO set default colour correctly
+    color: #000;
+}
+
+.icon-close:before {
+    content: '\E5CD';
+}
+
+.icon-arrow-drop-down {
+    content: '\E5C5';
+}
+
+.icon-play:before {
+    content: '\E037';
+}
+
+.icon-size {
+    &--md:before {
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+/*[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  font-size: 24px;
+  margin: 0 5px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-burger:before {
+  content: "\e622"; }*/

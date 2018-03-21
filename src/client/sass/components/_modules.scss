@@ -1,0 +1,37 @@
+
+.mod {
+    padding: 12px 0;
+
+    &--top {
+        border-top: 1px solid $colour-border-reg;
+    }
+}
+
+
+.mod-popout {
+    display: flex;
+    padding: (2 * $baseline) 0;
+
+    // @media screen and (min-width: $grid-min-width-md) {
+    //     flex-direction: row;
+    // }
+    // @include breakpoint-down(sm) {
+    //     flex-direction: column;
+    // }
+
+    @include breakpoint-up(md) {
+        // background: red;
+    }
+}
+
+.mod-popout__heading {
+    color: #4d4d4d;
+    font-size: 12px;
+    font-family: 'raleway-bold';
+    text-transform: uppercase;
+    flex-basis: 15%;
+}
+
+.mod-popout__main {
+    flex-grow: 1;
+}

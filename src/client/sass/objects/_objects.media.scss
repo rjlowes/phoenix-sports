@@ -1,0 +1,18 @@
+.o-media {
+    display: flex;
+    align-items: flex-start;
+}
+
+.o-media__figure {
+    margin-right: 2 * $baseline;
+
+    &--right {
+        margin-right: 0;
+        margin-left: 2 * $baseline;
+        order: 2;
+    }
+}
+
+.o-media__body {
+    flex: 1;
+}

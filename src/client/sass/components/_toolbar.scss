@@ -1,0 +1,9 @@
+.g-toolbar {
+    @extend %wrapper;
+    border-bottom: 1px solid $colour-border-reg;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}

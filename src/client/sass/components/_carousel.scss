@@ -1,0 +1,24 @@
+.c-carousel {
+    overflow: hidden;
+}
+
+.c-carousel__item-list {
+    position: relative;
+}
+
+.c-carousel__item {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .4s linear;
+
+    &--active {
+        opacity: 1;
+        position: relative;
+    }
+}
+
+.c-carousel__item-img {
+
+}

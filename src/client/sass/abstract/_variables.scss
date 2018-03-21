@@ -1,0 +1,115 @@
+// Global baseline
+//
+$baseline: 6px;
+
+// Grid
+//
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$grid-gutter: 2 * $baseline;
+$grid-cols: 12;
+
+
+// TODO Booty to delete
+$grid-gutter-width:           24px !default;
+
+// Colours
+//
+// ----------------------------
+$colour-pastel-gray-100: #cccccc;
+$colour-white-smoke-100: #f4f4f4;
+$palette-white: #ffffff;
+$palette-cod-grey: #191919;
+$palette-dusty-grey: #999999;
+$palette-black: #111111;
+
+
+// Named colours
+//
+// ----------------------------
+$colour-placeholder: $colour-pastel-gray-100;
+$colour-border-reg: $colour-white-smoke-100;
+$slab-colour-dark-grey: $palette-cod-grey;
+$colour-text-heading-invert: $palette-white;
+$colour-text-body-invert: $palette-dusty-grey;
+
+
+
+// Old colours TO REMOVE>>......
+// -------------------------------------------
+$colour-dark-grey: #333;        // backgrounds
+$colour-light-grey: #3e3e3e;    // borders
+
+// General brand colours
+// -------------------------------------------
+$colour-primary:            #29abe2 !default;
+$colour-grey:               #f2f2f2 !default;       // TODO remove
+$colour-white:              #ffffff;
+
+// Typography
+// -------------------------------------------
+$colour-heading: #4d4d4d;
+$colour-heading-inverse: #c9c9c9;
+$colour-body: #808080;
+$colour-body-inverse: #e5e5e5;
+$colour-form-control: #4d4d4d;
+
+
+// Button colours (TBC)
+// -------------------------------------------
+$btn-default-colour:        $palette-white;
+$btn-default-background-colour:    $palette-black;
+$btn-primary-colour:        red !default;
+$btn-primary-background:    blue !default;
+
+
+// Paging
+// -------------------------------------------
+$paging-bg-colour:                  #F1F1F1 !default;
+$paging-bg-selected-colour:         #4d4d4d !default;
+$paging-text-colour:                #4d4d4d !default;
+$paging-text-selected-colour:       #ffffff !default;
+
+
+
+// Typography
+// -------------------------------------------
+
+
+
+// $font-family-heading:           'montserratblack', sans-serif;
+$font-family-heading:           "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-body:              "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-body-bold:         'RobotoBold', sans-serif;
+$font-family-bold:              'RobotoBold', sans-serif;
+
+
+// TODO jumbo heading for large titles
+$font-size-h1:            2.4;
+$line-height-h1:          1.25;
+$font-size-h2:            2;
+$line-height-h2:          1.25;
+$font-size-h3:            1.6;
+$line-height-h3:          1.125;
+$font-size-h4:            1.2                 !default;
+$line-height-h4:          1.5              !default;
+$font-size-p:           1.4                 !default;
+$line-height-p:         1.5                 !default;
+$font-size-default:           1.4                 !default;
+$line-height-default:         1.5                 !default;
+$font-colour-default: $palette-black;
+
+$font-size-lead:           1.6                 !default;
+$line-height-lead:         1.5             !default;
+$font-size-sm:             1.1                 !default;
+$line-height-sm:           1.8462              !default;
+$font-size-list:            1.2                 !default;
+$line-height-list:          1.5                 !default;
+$font-size-legend:          1.8                 !default;
+$line-height-legend:        1                   !default;

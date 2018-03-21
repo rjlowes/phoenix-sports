@@ -1,0 +1,24 @@
+@mixin icon-pseudo ($pseudo:"before", $font-size:20px, $content:"\e01a") {
+&:#{$pseudo} {
+font-family: ico;
+font-size: $font-size;
+content: $content; // default content is X (cross)
+@content;
+}
+}
+// yuk, my formatting is gone
+// then you could do
+@include icon-pseudo;
+// just to get default values
+// or
+@include icon-pseudo ($font-size: 26px, $content: "\e01c") {
+float: left;
+height: 40px;
+margin-right: 10px;
+line-height: 35px;
+color: $grey-medium;
+}
+// to specify and overwrite stuff
+// im liking this
+// and it includes the:
+&:before { styles }

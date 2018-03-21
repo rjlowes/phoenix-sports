@@ -1,0 +1,21 @@
+// Form group wrapper
+// -------------------------------------------
+.form-group {
+    @extend .row;
+    margin-bottom: 12px;
+}
+
+.form-group__label {
+    @extend .col-md-12;
+    margin-bottom: 6px;
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 8px;
+    }
+    @include media-breakpoint-up(md) {
+        align-self: center;
+    }
+}
+
+.form-group__input {
+    @extend .col-md-12;
+}

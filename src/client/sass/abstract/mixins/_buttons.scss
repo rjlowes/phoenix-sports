@@ -1,0 +1,6 @@
+@mixin btn-size($padding-horizontal, $font-size, $line-height, $border-radius) {
+    padding: 0 $padding-horizontal;
+    @include font-size($font-size);
+    line-height: $line-height;
+    border-radius: $border-radius;
+}

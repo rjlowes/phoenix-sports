@@ -1,0 +1,23 @@
+.t-catalogue-list {
+    @extend %wrapper;
+}
+
+.t-catalogue-list__row-main {
+    @extend %grid;
+}
+
+.t-catalogue-list__sidebar {
+    @include grid-col(2);
+    @include breakpoint-down(md) {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+}
+
+.t-catalogue-list__main {
+    @include grid-col(12);
+    @include breakpoint-up(lg) {
+        @include grid-col(10);
+    }
+}

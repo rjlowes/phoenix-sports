@@ -1,0 +1,28 @@
+.page-bullets {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.page-bullets__item {
+    display: inline-block;
+    margin: 0 2px;
+    width: 30px;
+}
+
+.page-bullets__link {
+    background-color: $paging-bg-colour;
+    color: $paging-text-colour;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    outline: 0;
+    transition: background-color 0.4s ease-out;
+
+    &:hover,
+    &--selected {
+        background-color: $paging-bg-selected-colour;
+        color: $paging-text-selected-colour;
+    }   
+}
+

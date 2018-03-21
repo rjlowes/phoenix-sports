@@ -1,0 +1,21 @@
+// account template
+//
+// description: provides global templating for account section.
+// sub-templates are used witin
+
+.t-account {
+    @extend .container;
+    margin-top: 2 * $baseline;
+}
+
+.t-account__row {
+    @extend .row;
+}
+
+.t-account__sidebar {
+    @extend .col-sm-3;
+}
+
+.t-account__main {
+    @extend .col-sm-9;
+}

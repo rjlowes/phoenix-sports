@@ -1,0 +1,50 @@
+// Forms components of greater complexity
+
+.grid-linear {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-box-group {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2 * $baseline;
+
+    // TODO Extract this font styles
+    color: #4d4d4d;
+    font-size: 12px;
+    font-family: 'raleway-bold';
+    text-transform: uppercase;
+}
+
+.form-box-group__input {
+    position: absolute;
+    left: -9999px;
+}
+
+.form-box-group__text {
+    display: block;
+}
+
+
+.form-compact {
+
+}
+
+.form-compact__wrap {
+    position: relative;
+}
+
+.form-compact__btn {
+    background: none;
+    border-radius: 30px;
+    // border: 1px solid $colour-primary;
+    // color: $colour-primary;
+    // font-size: 18px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    height: 34px;
+    width: 34px;
+}
