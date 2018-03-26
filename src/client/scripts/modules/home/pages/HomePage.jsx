@@ -8,16 +8,15 @@ import ProductSlider from 'modules/home/components/ProductSlider';
 
 export default class HomePage extends Component {
 	render() {
-        const containerStyle = {background: '#f5f5f5'};
 		return (
 
 			<div className="t-homepagex">
-                <div className="wrapper">
+                {/* <div className="wrapper">
                     <div className="grid">
                         <div className="grid__col">one</div>
                         <div className="grid__col">two</div>
                     </div>
-                </div>
+                </div> */}
 
 				<GallerySlider />
 

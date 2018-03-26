@@ -205,3 +205,12 @@
 .slick-dots li.slick-active button {
     background: $colour-primary;
 }
+
+.gallery-slider {
+    .slick-prev {
+        left: 12px;
+    }
+    .slick-next {
+        right: 12px;
+    }
+}

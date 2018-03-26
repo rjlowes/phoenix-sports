@@ -12,7 +12,7 @@ module.exports = {
             __dirname + '/src/client/scripts'
         ]
     },
-    entry: ['./src/client/scripts/main.jsx'],
+    entry: ["babel-polyfill", './src/client/scripts/main.jsx'],
     output: {
         path: path.resolve('./public'),
         filename: 'scripts/main.build.js'

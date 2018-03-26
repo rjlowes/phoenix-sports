@@ -15,6 +15,7 @@ const Layout = () => {
                 {routes}
             </main>
             <Footer />
+            <div className="g-screen"></div>
         </div>
     );
 };

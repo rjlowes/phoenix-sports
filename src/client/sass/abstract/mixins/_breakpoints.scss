@@ -4,6 +4,7 @@
 }
 
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+    $min: map-get($breakpoints, $name);
     @return if($min != 0, $min, null);
 }
 
@@ -23,7 +24,6 @@
     }
 }
 
-
 @mixin breakpoint-down($name, $breakpoints: $grid-breakpoints) {
     $max: breakpoint-max($name, $breakpoints);
     @if $max {
@@ -34,11 +34,6 @@
         @content;
     }
 }
-
-
-
-
-
 
 @mixin breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($lower, $breakpoints);

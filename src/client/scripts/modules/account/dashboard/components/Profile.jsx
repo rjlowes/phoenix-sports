@@ -1,14 +1,7 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-// import store from 'lib/redux/store';
+import { connect } from 'react-redux';
 
-
-@connect((store) => {
-    return {
-        customer: store.authentication.customer
-    };
-})
-export default class Profile extends Component {
+class Profile extends Component {
 
     render() {
         return (
@@ -28,3 +21,11 @@ export default class Profile extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        customer: state.authentication.customer
+    };
+}
+
+export default connect(mapStateToProps)(Profile);

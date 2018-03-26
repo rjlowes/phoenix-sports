@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { push } from 'react-router-redux';
 
 // Address list
@@ -5,40 +6,39 @@ export const FETCH_ADDRESS_LIST_REQUEST = "FETCH_ADDRESS_LIST_REQUEST";
 export const FETCH_ADDRESS_LIST_SUCCESS = "FETCH_ADDRESS_LIST_SUCCESS";
 export const FETCH_ADDRESS_LIST_FAILURE = "FETCH_ADDRESS_LIST_FAILURE";
 
-const fetchAddressListRequest = () => {
-    return {
-        type: FETCH_ADDRESS_LIST_REQUEST
-    };
-};
+const fetchAddressesSuccess = (addresses) => ({
+    type: FETCH_ADDRESS_LIST_SUCCESS,
+    payload: addresses
+});
 
-const fetchAddressListSuccess = (addresses) => {
-    return {
-        type: FETCH_ADDRESS_LIST_SUCCESS,
-        payload: addresses
-    };
-};
+const fetchAddressesFailure = () => ({
+    type: FETCH_ADDRESS_LIST_FAILURE
+});
 
-const fetchAddressListFailure = () => {
-    return {
-        type: FETCH_ADDRESS_LIST_FAILURE
-    };
-};
 
+const ADDRESSES_URL = '/api/customer/addresses';
 
 export function fetchAddressList() {
-    return function(dispatch) {
-        dispatch(fetchAddressListRequest());
+    return async (dispatch) => {
+        try {
+            const request = await axios.get(ADDRESSES_URL);
 
-        return fetch('/api/customer/addresses', {
-            method: 'GET',
-            headers: {'Content-Type': 'application/json'},
-            credentials: 'include'
-        })
-        .then(response => response.json())
-        .then(addresses => dispatch(fetchAddressListSuccess(addresses)))
-        .catch(() => dispatch(fetchAddressListFailure()));
+            dispatch(fetchAddressesSuccess(request.data));
+        } catch(e) {
+            dispatch(fetchAddressesFailure());
+        }
     }
 }
+
+// export function fetchAddress(id) {
+//     return async (dispatch) => {
+//         try {
+//             const request = await axios.get(`${ADDRESSES_URL}/${id}`);
+//
+//             dispatch(fetchAddressSuccess())
+//         }
+//     }
+// }
 
 // Address create
 export const CREATE_ADDRESS_REQUEST = "CREATE_ADDRESS_REQUEST";

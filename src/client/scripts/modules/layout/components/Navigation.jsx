@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 export default class Navigation extends Component {
-    
+
     renderNav(items, level, props = {}) {
         return (
             <ul className={`nav-list nav-list--l${level}`}>
@@ -28,7 +28,7 @@ export default class Navigation extends Component {
         if(!this.props.categories) {
             return null;
         }
-
+        
         return this.renderNav(this.props.categories, 0);
     }
 }

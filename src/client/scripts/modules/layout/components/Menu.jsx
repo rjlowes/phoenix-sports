@@ -12,6 +12,7 @@ const Menu = (props) => {
                 <MenuButton />
             </BodyClassToggleButton>
             {/*<Search />*/}
+            {/* <div className="navigation-bg"></div> */}
             <NavigationContainer />
         </nav>
     );
