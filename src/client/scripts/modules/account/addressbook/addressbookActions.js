@@ -1,10 +1,13 @@
 import axios from 'axios';
 import { push } from 'react-router-redux';
 
-// Address list
-export const FETCH_ADDRESS_LIST_REQUEST = "FETCH_ADDRESS_LIST_REQUEST";
+
 export const FETCH_ADDRESS_LIST_SUCCESS = "FETCH_ADDRESS_LIST_SUCCESS";
 export const FETCH_ADDRESS_LIST_FAILURE = "FETCH_ADDRESS_LIST_FAILURE";
+export const FETCH_ADDRESS_SUCCESS = "FETCH_ADDRESS_SUCCESS";
+export const FETCH_ADDRESS_FAILURE = "FETCH_ADDRESS_FAILURE";
+
+const ADDRESSES_URL = '/api/customer/addresses';
 
 const fetchAddressesSuccess = (addresses) => ({
     type: FETCH_ADDRESS_LIST_SUCCESS,
@@ -14,9 +17,6 @@ const fetchAddressesSuccess = (addresses) => ({
 const fetchAddressesFailure = () => ({
     type: FETCH_ADDRESS_LIST_FAILURE
 });
-
-
-const ADDRESSES_URL = '/api/customer/addresses';
 
 export function fetchAddressList() {
     return async (dispatch) => {
@@ -30,15 +30,26 @@ export function fetchAddressList() {
     }
 }
 
-// export function fetchAddress(id) {
-//     return async (dispatch) => {
-//         try {
-//             const request = await axios.get(`${ADDRESSES_URL}/${id}`);
-//
-//             dispatch(fetchAddressSuccess())
-//         }
-//     }
-// }
+const fetchAddressSuccess = (address) => ({
+    type: FETCH_ADDRESS_SUCCESS,
+    payload: address
+});
+
+const fetchAddressFailure = () => ({
+    type: FETCH_ADDRESS_FAILURE
+});
+
+export function fetchAddress(id) {
+    return async (dispatch) => {
+        try {
+            const request = await axios.get(`${ADDRESSES_URL}/${id}`);
+
+            dispatch(fetchAddressSuccess(request.data));
+        } catch(e) {
+            dispatch(fetchAddressFailure());
+        }
+    }
+}
 
 // Address create
 export const CREATE_ADDRESS_REQUEST = "CREATE_ADDRESS_REQUEST";

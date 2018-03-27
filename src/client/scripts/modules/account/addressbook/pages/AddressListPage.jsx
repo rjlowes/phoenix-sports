@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
-import {fetchAddressList} from 'modules/account/addressbook/addressbookActions';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { fetchAddressList } from 'modules/account/addressbook/addressbookActions';
 import AccountLayout from 'modules/account/layouts/AccountLayout';
 import AddressList from 'modules/account/addressbook/components/AddressList';
 
@@ -27,7 +27,7 @@ class AddressListPage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        addresses: state.addressbook.addresses
+        addresses: state.addressbook
     };
 };
 

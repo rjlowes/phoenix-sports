@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const chalk = require('chalk');
 const path = require('path');
 
-mongoose.Promise = Promise;
+mongoose.Promise = require('bluebird');
 
 
 exports.loadModels = function (callback) {

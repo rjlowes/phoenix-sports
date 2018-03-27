@@ -13,6 +13,14 @@ exports.list = (req, res) => {
     });
 };
 
+// TODO add some login required middleware
+// SEE https://stackoverflow.com/questions/45766838/node-js-how-restrict-page-access-to-unlogged-users
+exports.read = (req, res) => {
+    Address.findById(req.params.addressId).where('customer').equals(req.user._id)
+        .then(address => res.json(address))
+        .error(err => res.status(400).send({message: err.message}));
+};
+
 exports.create = (req, res) => {
     let address = new Address({
         name: req.body.name,

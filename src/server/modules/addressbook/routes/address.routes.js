@@ -6,4 +6,7 @@ module.exports = function (app) {
     app.route('/api/customer/addresses')
         .get(addresses.list)
         .post(addresses.create);
+
+    app.route('/api/customer/addresses/:addressId')
+        .get(addresses.read);
 };

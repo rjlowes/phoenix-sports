@@ -1,28 +1,16 @@
 import _ from 'lodash';
 import {
     FETCH_ADDRESS_LIST_SUCCESS,
-    FETCH_ADDRESS_LIST_FAILURE
+    FETCH_ADDRESS_SUCCESS
 } from 'modules/account/addressbook/addressbookActions';
 
-const initialState = {
-    addresses: null
-};
 
-const authenticationReducer = (state = initialState, action) => {
+const authenticationReducer = (state = {}, action) => {
     switch(action.type) {
         case FETCH_ADDRESS_LIST_SUCCESS:
-            const a = _.mapKeys(action.payload, '_id');
-            console.log(a);
-            return {
-                ...state,
-                addresses: action.payload
-            };
-        case FETCH_ADDRESS_LIST_FAILURE:
-
-            return {
-                ...state,
-                addresses: false
-            };
+            return _.mapKeys(action.payload, '_id');
+        case FETCH_ADDRESS_SUCCESS:
+            return { ...state, [action.payload._id]: action.payload };
         default:
             return state;
     }

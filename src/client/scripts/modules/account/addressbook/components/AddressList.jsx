@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, {Component} from 'react';
 
 import {Link} from 'react-router-dom';
@@ -13,9 +14,9 @@ const AddressList = ({addresses}) => {
 
     return (
         <div className="row">
-            {addresses.map((address, idx) => {
+            {_.map(addresses, address => {
                 return (
-                    <div className="col-md-4" key={idx}>
+                    <div className="col-md-4" key={address._id}>
                         <div className="card-info type-sml">
                             <div className="card-info__text">
                                 <PostalAddress address={address} />

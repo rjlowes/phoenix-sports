@@ -1,19 +1,19 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import _ from 'lodash';
-
+import { fetchAddress } from 'modules/account/addressbook/addressbookActions';
 import AddressForm from 'lib/forms/AddressForm';
 
-import { fetchAddressList } from 'lib/redux/addressbook/addressBookActions';
 
 class AddressEditPage extends Component {
 
     componentDidMount() {
-        // TODO If address is empty then grab the list
-        let { fetchAddressList } = this.props;
+        if(!this.props.address) {
+            const { addressId } = this.props.match.params;
 
-        fetchAddressList();
+            this.props.fetchAddress(addressId);
+        }
     }
 
     handleSubmit = (values) => {
@@ -34,18 +34,8 @@ class AddressEditPage extends Component {
     }
 }
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = ({addressbook}, ownProps) => ({
+    address: addressbook[ownProps.match.params.addressId]
+});
 
-    const { addressId } = props.match.params;
-    const { addresses } = state.addressbook;
-    console.log('a', addresses);
-    console.log(_.find(addresses, {'_id': addressId}));
-
-
-    return {
-        addresses: state.addressbook.addresses,
-        address: _.find(state.addressbook.addresses, {'_id': addressId})
-    }
-};
-
-export default connect(mapStateToProps, { fetchAddressList })(AddressEditPage);
+export default connect(mapStateToProps, { fetchAddress })(AddressEditPage);
