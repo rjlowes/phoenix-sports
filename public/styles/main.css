@@ -1282,17 +1282,35 @@ html {
         display: block; 
     }
 }*/
+@font-face {
+  font-family: "raleway-bold";
+  src: url("../fonts/raleway-bold.woff2") format("woff2"), url("../fonts/raleway-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("../fonts/roboto-bold.woff2") format("woff2"), url("../fonts/roboto-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   font-size: 62.5%; }
 
 body {
   color: #111111;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "roboto-regular";
   -webkit-font-smoothing: antialiased; }
 
 h1, .h1 {
   color: #111111;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "raleway-bold";
   font-weight: 700;
   font-size: 24px;
   font-size: 2.4rem;
@@ -1304,7 +1322,7 @@ h1, .h1 {
 
 h2, .h2, .text-price {
   color: #4d4d4d;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "raleway-bold";
   font-weight: 700;
   font-size: 20px;
   font-size: 2rem;
@@ -1316,7 +1334,7 @@ h2, .h2, .text-price {
 
 h3, .h3 {
   color: #4d4d4d;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "raleway-bold";
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.125;
@@ -1327,7 +1345,7 @@ h3, .h3 {
 
 h4, .h4 {
   color: #4d4d4d;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "raleway-bold";
   font-weight: normal;
   line-height: 1.5;
   margin-bottom: 6px;
@@ -1337,7 +1355,7 @@ h4, .h4 {
 p, .p, .table-shopping thead th span, li {
   font-size: 14px;
   font-size: 1.4rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "roboto-regular";
   line-height: 1.5; }
 
 p, .p, .table-shopping thead th span {
@@ -1359,7 +1377,7 @@ legend,
   color: #ccc;
   font-size: 18px;
   font-size: 1.8rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "raleway-bold";
   line-height: 1;
   margin-bottom: 1em; }
 
@@ -1382,48 +1400,6 @@ legend,
 .product-heading__brand,
 .product-heading__title {
   display: inline-block; }
-
-@font-face {
-  font-family: 'montserratblack';
-  src: url("/fonts/montserrat-black-webfont.woff2") format("woff2"), url("/fonts/montserrat-black-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'montserratmedium';
-  src: url("/fonts/montserrat-medium-webfont.woff2") format("woff2"), url("/fonts/montserrat-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'raleway-bold';
-  src: url("/fonts/raleway-bold.woff2") format("woff2"), url("/fonts/raleway-bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'raleway-regular';
-  src: url("/fonts/raleway-regular.woff2") format("woff2"), url("/fonts/raleway-regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'robotoregular';
-  src: url("/fonts/Roboto-Regular-webfont.woff2") format("woff2"), url("/fonts/Roboto-Regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'robotobold';
-  src: url("/fonts/roboto-bold-webfont.woff2") format("woff2"), url("/fonts/roboto-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'robotolight';
-  src: url("/fonts/roboto-light-webfont.woff2") format("woff2"), url("/fonts/roboto-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
 
 .legend-center {
   margin: 0 auto 1em auto; }
@@ -2335,7 +2311,7 @@ label.error {
 
 .filter {
   color: #C8C8C8;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "raleway-bold";
   font-size: 11px;
   letter-spacing: 1px;
   line-height: 25px;

@@ -82,12 +82,12 @@ $paging-text-selected-colour:       #ffffff !default;
 // -------------------------------------------
 
 
+$font-family-heading:           "raleway-bold";
+$font-family-body:              "roboto-regular";
+$font-family-body-bold:         'roboto-bold';
+$font-family-bold:              'roboto-bold';
 
-// $font-family-heading:           'montserratblack', sans-serif;
-$font-family-heading:           "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-body:              "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-body-bold:         'RobotoBold', sans-serif;
-$font-family-bold:              'RobotoBold', sans-serif;
+$font-faces: $font-family-heading $font-family-body $font-family-body-bold;
 
 
 // TODO jumbo heading for large titles
