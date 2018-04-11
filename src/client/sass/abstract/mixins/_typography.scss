@@ -15,58 +15,51 @@
     }
 }
 
+@mixin typography($font-map) {
+    @each $breakpoint, $bp-map in $font-map {
+        $font-size: map-get($bp-map, size);
+        $line-height: map-get($bp-map, line-height);
 
-// rem mixin
-//
-// -----------------------------
-@mixin rem($sizeValue: 1.6) {
-    font-size: ($sizeValue * 10) + px;
-    font-size: $sizeValue + rem;
+        @if $breakpoint == null {
+            @include font-size-line-height($font-size, $line-height);
+        }
+        @else {
+            @if map-get($grid-breakpoints, $breakpoint) != null {
+                @include media-breakpoint-up($breakpoint) {
+                    @include font-size-line-height($font-size, $line-height);
+                }
+            }
+            @else {
+                @warn "No breakpoint found for #{$breakpoint}";
+            }
+        }
+    }
 }
 
-
-// font size mixin
-//
+// Calculate rem from pixel size
 // -----------------------------
-@mixin font-size($sizeValue: 1.6) {
-  font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
+@function calculateRem($size) {
+    $remSize: $size / $font-base;
+    @return $remSize;
 }
 
-//
-//
+// rem font-size and unitless line-height
 // -----------------------------
-@function strip-unit($num) {
-	@return $num / ($num * 0 + 1);
+@mixin font-size-line-height($font-size, $line-height) {
+    $rem-font-size: calculateRem($font-size);
+    $line-height-unitless: strip-unit($line-height) / strip-unit($font-size);
+
+    font-size: $font-size;
+    font-size: #{$rem-font-size}rem;
+    line-height: $line-height-unitless;
 }
 
-// rem fallback
-// allows rem to be set on any property
-//
+// Strip unit
 // -----------------------------
-@mixin rem-fallback($property, $values...) {
-	$max: length($values);
-	$pxValues: '';
-	$remValues: '';
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
 
-	@for $i from 1 through $max {
-		$value: strip-unit(nth($values, $i));
-		$pxValues: #{$pxValues + $value*16}px;
-
-		@if $i < $max {
-			$pxValues: #{$pxValues + " "};
-		}
-	}
-
-	@for $i from 1 through $max {
-		$value: strip-unit(nth($values, $i));
-		$remValues: #{$remValues + $value}rem;
-
-		@if $i < $max {
-			$remValues: #{$remValues + " "};
-		}
-	}
-
-	#{$property}: $pxValues;
-	#{$property}: $remValues;
+    @return $number;
 }

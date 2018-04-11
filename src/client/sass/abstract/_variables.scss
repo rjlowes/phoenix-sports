@@ -1,16 +1,9 @@
 // Global baseline
 //
 $baseline: 6px;
+$font-base: 10px;
 
-// Grid
-//
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px
-);
+
 
 $grid-gutter: 2 * $baseline;
 $grid-cols: 12;
@@ -89,6 +82,19 @@ $font-family-bold:              'roboto-bold';
 
 $font-faces: $font-family-heading $font-family-body $font-family-body-bold;
 
+
+$font-sizes: (
+    heading1: (
+        null: (size: 24px, line-height: 36px),
+        md: (size: 30px, line-height: 36px)
+    ),
+    heading2: (
+        null: (size: 20px, line-height: 24px)
+    ),
+    font: (
+        null: (size: 14px, line-height: 18px)
+    )
+);
 
 // TODO jumbo heading for large titles
 $font-size-h1:            2.4;

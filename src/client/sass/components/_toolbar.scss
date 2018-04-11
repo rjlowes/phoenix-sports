@@ -1,5 +1,5 @@
 .g-toolbar {
-    @extend %wrapper;
+    @extend .container;
     border-bottom: 1px solid $colour-border-reg;
     padding-bottom: 6px;
     padding-top: 6px;

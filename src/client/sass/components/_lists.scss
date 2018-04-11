@@ -21,7 +21,7 @@
 }
 
 .list-action__link {
-    @include font-size($font-size-list);
+    // @include font-size($font-size-list);
 
     img {
         font-size: 18px;
@@ -81,7 +81,7 @@
 
 .list-menu__item-link {
     // temp
-    @include font-size(1.4);
+    // @include font-size(1.4);
     line-height: 2;
     &--light {
         color: $colour-text-body-invert;

@@ -17,7 +17,7 @@
 // All input types
 .form-input {
     @include placeholder{color: $colour-placeholder};
-    @include font-size($font-size-sm);
+    // @include font-size($font-size-sm);
     border: 1px solid #dedede;
     border-radius: 1px;
     color: #ccc;
@@ -82,7 +82,7 @@ input.ng-invalid.ng-touched {
 
 label.error {
     color: #A7050C;
-    @include rem($font-size-sm);
+    // @include rem($font-size-sm);
     font-weight: 600;
     line-height: $line-height-sm;
     margin-bottom: #{$font-size-sm}em;

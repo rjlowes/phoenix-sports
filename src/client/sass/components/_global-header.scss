@@ -4,12 +4,14 @@
 }
 
 .g-header__wrapper {
-    @extend %wrapper;
+    @extend .container;
     padding: 6px 0;
 }
 
 .g-header__grid {
-    @extend %grid;
+    display: flex;
+    padding: 0 $grid-gutter;
+    // @extend .row;
     align-items: center;
     @include breakpoint-down(md) {
         justify-content: flex-end;
@@ -17,7 +19,7 @@
 }
 
 .g-header__logo {
-    @include grid-col(1);
+    width: 50px;
     @include breakpoint-down(md) {
         margin-right: auto;
     }
@@ -28,10 +30,7 @@
 }
 
 .g-header__navigation {
-    @include media-breakpoint-up(lg) {
-        @include grid-col(6);
-        @include grid-push(1);
-    }
+    width: 50%;
 }
 
 .g-header__search {
@@ -58,9 +57,9 @@
 }
 
 .g-header__btn-group {
-    @include grid-col(6);
     display: flex;
     justify-content: flex-end;
+    width: 50%;
 
     @include breakpoint-up(lg) {
         display: none;
@@ -73,9 +72,3 @@
     }
     width: 36px;
 }
-
-// .g-header__menu-btn {
-//     @include media-breakpoint-up(md) {
-//         display: none;
-//     }
-// }

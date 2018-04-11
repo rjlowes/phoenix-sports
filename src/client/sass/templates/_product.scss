@@ -1,23 +1,21 @@
 .t-prod {
-    @extend %wrapper;
+    @extend .container;
     padding-top: 5 * $baseline;
 }
 
 .t-prod__primary-grid {
-    @extend %grid;
+    @extend .row;
     @include breakpoint-down(sm) {
         flex-direction: column;
     }
 }
 
 .t-prod__gallery {
-    @include grid-col(12);
+    @extend .col-md-6;
     display: none;
     @include breakpoint-up(md) {
-        @include grid-col(6);
         display: block;
     }
-
 
     // TODO bodge
     img {width: 100%;}
@@ -30,14 +28,7 @@
 }
 
 .t-prod__summary {
-    @include grid-col(12);
-    @include breakpoint-up(md) {
-        @include grid-col(6);
-    }
-    @include breakpoint-up(lg) {
-        @include grid-col(5);
-        @include grid-push(1);
-    }
+    @extend .col-md-5, .col-lg-5, .offset-lg-1;
 }
 
 .t-prod__info {
